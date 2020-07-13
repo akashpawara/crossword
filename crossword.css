@@ -46,7 +46,7 @@ body{
     margin: 0 20px 0 0;
   }
   .clue {
-    width: 500px;
+    width: 630px;
     margin: 0 0 4px 0;
   }
   .lineNum {
@@ -74,6 +74,7 @@ body{
     height: 1.25em;
     line-height: 1.25em;
     vertical-align: top;
+    
   }
   .char:focus {
     -webkit-box-shadow: 0 0 0 2px rgb(0, 133, 180);
@@ -92,6 +93,10 @@ body{
     height: 1.25em;
     text-align: center;
     background-color: rgb(200, 200, 200);
+  }
+  .test{
+    background-color: rgba(200, 200, 200, 0.568);
+    color:blue;
   }
   .charReadOnly:focus {
     -webkit-box-shadow: 0 !important;
@@ -124,7 +129,7 @@ body{
   
   .btn:hover {
     cursor: pointer;
-    background-color: rgb(150, 150, 150);
+    background: rgba(255, 255, 255, 0.137);
   }
   
   #btnCheck {
@@ -132,6 +137,13 @@ body{
     right: 2rem;
     top: 1rem;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.308);
+  }
+  #btnCheck:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.219);
   }
   
   #btnReset {

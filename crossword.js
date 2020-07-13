@@ -69,7 +69,7 @@ function FormatClues() {
   for (i = 0; i < wordElementsAcross.length; i++) {
     var lineEle = cluesAcross.appendChild(wordElementsAcross[i].ele),
       numEle = lineEle.getElementsByClassName("lineNum")[0];
-    console.log(numEle);
+    // console.log(numEle);
     numEle.innerHTML = wordElementsAcross[i].num;
     RemoveClass(numEle, "disabled");
   }
@@ -601,12 +601,64 @@ Generate();
 Play();
 
 //==================================================//
-
+let T = false;
+let H = false;
+let E = false;
+let M = false;
+let P = false;
+let S = false;
 $("#btnCheck").click(function () {
   $(".square input").each(function () {
     if (!($(this).attr("data-letter") === $(this).val().toUpperCase())) {
       console.log("incorrect");
       $(this).val("");
+      
+    }
+    switch($(this).val().toUpperCase()){
+        case 'T':
+            if(!T){
+                let test = document.querySelector('[data-letter="T"]');
+                test.classList.add("test");
+                T = true;
+            }
+            break;
+        case 'H':
+            if(!H){
+                let test = document.querySelector('[data-letter="H"]');
+                test.classList.add("test");
+                H = true;
+            }
+            break;
+        case 'E':
+            if(!E){
+                let test = document.querySelector('[data-letter="E"]');
+                test.classList.add("test");
+                E = true;
+            }
+            break;
+        case 'M':
+            if(!M){
+                let test = document.querySelector('[data-letter="M"]');
+                test.classList.add("test");
+                M = true;
+            }
+            break;
+        case 'P':
+            if(!P){
+                let test = document.querySelector('[data-letter="P"]');
+                test.classList.add("test");
+                P = true;
+            }
+            break;
+        case 'S':
+            if(!S){
+                let test = document.querySelector('[data-letter="S"]');
+                test.classList.add("test");
+                S = true;
+            }
+            break;
+        default:
+            break;
     }
   });
 });
