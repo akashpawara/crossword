@@ -95,7 +95,7 @@ body{
     background-color: rgb(200, 200, 200);
   }
   .test{
-    background-color: rgba(200, 200, 200, 0.568);
+    /* background-color: rgba(200, 200, 200, 0.568); */
     color:blue;
   }
   .charReadOnly:focus {

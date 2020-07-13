@@ -612,7 +612,6 @@ $("#btnCheck").click(function () {
     if (!($(this).attr("data-letter") === $(this).val().toUpperCase())) {
       console.log("incorrect");
       $(this).val("");
-      
     }
     switch($(this).val().toUpperCase()){
         case 'T':
