@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crossword.css">
+    <title>Crossword</title>
+</head>
+<body>
+    <div class="container crosswordDisplay">
+
+        <div class="row">
+          <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
+          <div class="btn btn-default disabled" id="btnCreate">Create</div>
+          <div class="btn btn-default disabled" id="btnPlay">Play</div>
+      
+          <div class="btn btn-default" id="btnReset">Reset</div>
+          <div class="btn btn-default" id="btnCheck">Check Answers</div>
+        </div>
+      
+        <div class="center crossword" id="crossword"></div>
+      
+        <div class="btn" id="btnGen">Generate</div>
+      
+        <div class="col-lg-6 ">
+          <div class="clueBlock" id="cluesAcross">
+            <div class="clueDirection" id="directionAcross">ACROSS</div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Waah" />
+              <span class="lineNum"></span>
+              <input class="clue" value="3...2...1...? (2)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Javelins" />
+              <span class="lineNum"></span>
+              <input class="clue" value="You planned my murder with a bunch of these (1)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Polar Bear" />
+              <span class="lineNum"></span>
+              <input class="clue" value="What is your character in the comic reference which I was goinng to put as caption for our pic on my feed? (3)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Roma Gupta" />
+              <span class="lineNum"></span>
+              <input class="clue" value="10th grade ki Saturday afternoon wali class ki teacher ka naam (4)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Consigliere" />
+              <span class="lineNum"></span>
+              <input class="clue" value="If you are my Godfather, I'm your .... (5)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Odd Even" />
+              <span class="lineNum"></span>
+              <input class="clue" value="Which is the game jismein tu hamesha haarta hai? (6)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Palolem" />
+              <span class="lineNum"></span>
+              <input class="clue" value="We drove to this island and had the best time of our life (7)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="directions" />
+              <span class="lineNum"></span>
+              <input class="clue" value="What question do I always ask when I come to your pllace? (8)" />
+            </div>
+      
+            <div class="line">
+              <input class="word" type="text" value="Open Mic" />
+              <span class="lineNum"></span>
+              <input class="clue" value="Our perfect night out would be: (9)" />
+            </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="col-lg-6">
+          <div class="clueBlock" id="cluesDown">
+            <div class="clueDirection" id="directionDown">DOWN</div>
+          </div>
+      
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="crossword.js"></script>
+</body>
+</html>
