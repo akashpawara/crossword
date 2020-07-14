@@ -700,7 +700,7 @@ $(function () {
                         {type: 'INSTA ID - hitlerkabaap'},
                         {delay: 1000},
                         {type: '<br>'},
-                        {type: 'INSTA PASSWORD - theTempest '},
+                        {type: 'INSTA PASSWORD - TheTempest '},
                       ]
                     });
                 },200)
