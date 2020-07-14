@@ -508,10 +508,6 @@ function BoardCharFocus(boardChar) {
   };
 }
 
-//---------------------------------//
-//   OBJECT DEFINITIONS            //
-//---------------------------------//
-
 function WordObj(wordData) {
   this.element = wordData.ele;
   this.string = wordData.value;
@@ -520,10 +516,6 @@ function WordObj(wordData) {
   this.effectiveMatches = 0;
   this.successfulMatches = [];
 }
-
-//---------------------------------//
-//   EVENTS                        //
-//---------------------------------//
 
 function RegisterEvents() {
   document.getElementById("btnPlay").addEventListener("click", Play, false);
@@ -551,10 +543,6 @@ function CreateCallback(type, boardChar) {
       };
   }
 }
-
-//---------------------------------//
-//   HELPER FUNCTIONS              //
-//---------------------------------//
 
 function EleStr(e, c, h) {
   h = h ? h : "";
@@ -592,25 +580,24 @@ String.prototype.replaceAll = function (replaceThis, withThis) {
   return this.replace(re, withThis);
 };
 
-//---------------------------------//
-//   INITIAL LOAD                  //
-//---------------------------------//
-
 Create();
 Generate();
 Play();
 
-//==================================================//
 let T = false;
 let H = false;
 let E = false;
 let M = false;
 let P = false;
 let S = false;
+let stat;
 $("#btnCheck").click(function () {
+    stat=0;
   $(".square input").each(function () {
     if (!($(this).attr("data-letter") === $(this).val().toUpperCase())) {
       console.log("incorrect");
+      stat++;
+    //   console.log(stat);
       $(this).val("");
     }
     switch($(this).val().toUpperCase()){
@@ -660,8 +647,68 @@ $("#btnCheck").click(function () {
             break;
     }
   });
+  console.log(stat);
+  if(stat===0){
+    setTimeout(()=>{ 
+        $('.container').css('display','none');
+    },5000);
+    setTimeout(()=>{ 
+        $('#wrapper').css('display','block');
+    },7000);
+  }
 });
 
-$("#btnReset").click(function () {
-  location.reload();
-});
+$(function () {
+    var word = "THETEMPEST",
+      rand = [],
+      puzzle = $("#puzzle").hide();
+  
+    //EXPLODE WORD AND RANDOMIZE
+    var letters = word.split("");
+    var jumble = letters.slice().sort(function () {
+      return 0.5 - Math.random();
+    });
+  
+    //LABEL
+    $.each(jumble, function (index, letter) {
+      $("<section></section>").html(letter).appendTo(puzzle);
+    });
+  
+    puzzle.sortable({
+        items: "section",
+        stop: function (event, ui) {
+          var ordered = true;
+          $(this)
+            .find("section")
+            .each(function (i, el) {
+              ordered = letters[i] === $(el).html() ? ordered : false;
+            });
+          if (ordered){
+              setTimeout(()=>{
+                  $("#result").typewrite({
+                    actions: [
+                        {type: 'Yaaay!! You actually solved it :) '},
+                        {delay: 1000},
+                        {type: '<br>'},
+                        {type: 'Who thought you had it in you...'},
+                        {delay: 1000},
+                        {type: '<br>'},
+                        {type: 'Now go and login with the following credentials ;)'},
+                        {delay: 1000},
+                        {type: '<br>'},
+                        {type: '<br>'},
+                        {type: 'INSTA ID - hitlerkabaap'},
+                        {delay: 1000},
+                        {type: '<br>'},
+                        {type: 'INSTA PASSWORD - theTempest '},
+                      ]
+                    });
+                },200)
+            //   setTimeout(()=>{$("#result2").show();},1000)
+            //   setTimeout(()=>{$("#result3").show();},2000)
+            //   setTimeout(()=>{$("#result4").show();},3000)
+          } 
+        }
+      })
+      .show();
+  });
