@@ -36,10 +36,10 @@ $(document).ready(function(){
     $("#intro-1").typewrite({
         actions: [
             {type: 'Happy Birthday Helamb!! '},
-            {delay: 2000},
+            {delay: 1000},
             {remove: {num: 1, type: 'stepped'}},
             {select: {from: 17, to: 23}},
-            {delay: 2000},
+            {delay: 1000},
             {remove: {num: 6, type: 'whole'}},
             {delay: 300},
             {type: 'ramb!! &#128516; '},
@@ -57,7 +57,7 @@ $(document).ready(function(){
             {type: '<br>'},
             {type: '<br>'},
             {type: 'Keep track of higlighted letters, as they are the clues for your next puzzle'},
-            {delay: 1000},
+            {delay: 2000},
             {type: '<br>'},
             {type: '<br>'},
             {type: `So, Let's Begin...... `},
