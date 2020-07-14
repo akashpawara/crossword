@@ -14,7 +14,7 @@ body{
     right: 0;
     text-align: center;
     color: aliceblue;
-    /* display: none; */
+    display: none;
   }
   
   .crosswordDisplay {
@@ -224,5 +224,26 @@ body{
     font-size: 20px;
     text-align: center;
     margin: 0 auto;
+    color: #fff;
+  }
+
+  #intro-1 {
+    /* display: none; */
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10%;
+    color: #fff;
+  }
+  #intro-2 {
+    display: none;
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10%;
     color: #fff;
   }

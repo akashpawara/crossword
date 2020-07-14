@@ -1,7 +1,3 @@
-//---------------------------------//
-//   GLOBAL VARIABLES              //
-//---------------------------------//
-
 var board,
   wordArr,
   wordBank,
@@ -36,9 +32,44 @@ var Bounds = {
   }
 };
 
-//---------------------------------//
-//   MAIN                          //
-//---------------------------------//
+$(document).ready(function(){
+    $("#intro-1").typewrite({
+        actions: [
+            {type: 'Happy Birthday Helamb!! '},
+            {delay: 2000},
+            {remove: {num: 1, type: 'stepped'}},
+            {select: {from: 17, to: 23}},
+            {delay: 2000},
+            {remove: {num: 6, type: 'whole'}},
+            {delay: 300},
+            {type: 'ramb!! &#128516; '},
+            {type: '<br>'},
+            {delay: 1000},
+            {type: '<br>'},
+            {type: `Before we continue with our game, let's take some notes`},
+            {delay: 1000},
+            {type: '<br>'},
+            {type: 'Scroll down to see the clues for the puzzle'},
+            {delay: 1000},
+            {type: '<br>'},
+            {type: 'Move your mouse over clues to know who wrote it'},
+            {delay: 1000},
+            {type: '<br>'},
+            {type: '<br>'},
+            {type: 'Keep track of higlighted letters, as they are the clues for your next puzzle'},
+            {delay: 1000},
+            {type: '<br>'},
+            {type: '<br>'},
+            {type: `So, Let's Begin...... `},
+          ]
+        });
+    setTimeout(()=>{ $("#intro-1").fadeOut(2000);},33000)
+    setTimeout(()=>{ 
+        $("#intro-1").css('display','none'); 
+        $(".container").fadeIn(2000); 
+        $(".container").css('display','block'); 
+    },35000)
+});
 
 function Play() {
   var charEleArr = document.getElementsByClassName("char");
@@ -649,12 +680,43 @@ $("#btnCheck").click(function () {
   });
   console.log(stat);
   if(stat===0){
+    $('.container').fadeOut(3000);
     setTimeout(()=>{ 
         $('.container').css('display','none');
-    },5000);
+        $('#intro-2').fadeIn(3000);
+    },3000);
+    setTimeout(()=>{
+        $('#intro-2').css('display','block');
+        $("#intro-2").typewrite({
+            actions: [
+                {delay: 2000},
+                {type: 'So did you lookout for those Highlighted letters?'},
+                {delay: 4000},
+                {type: '<br>'},
+                {type: '<br>'},
+                {type: `{T, H, E, M, P, S} These were the letters right?`},
+                {delay: 3000},
+                {type: '<br>'},
+                {type: '<br>'},
+                {type: 'So in the next Puzzle, these letters will be jumbled up'},
+                {delay: 1000},
+                {type: '<br>'},
+                {type: 'You need to drag those letters left and right to make up your answer'},
+                {delay: 1000},
+                {type: '<br>'},
+                {type: '<br>'},
+                {type: `So, Let's Begin...... `},
+              ]
+            });
+    },3500)
     setTimeout(()=>{ 
+        $('#intro-2').fadeOut(3000);
+    },35000);
+    setTimeout(()=>{ 
+        $('#intro-2').css('display','none');
+        $('#wrapper').fadeIn(3000);
         $('#wrapper').css('display','block');
-    },7000);
+    },38000);
   }
 });
 
@@ -663,13 +725,11 @@ $(function () {
       rand = [],
       puzzle = $("#puzzle").hide();
   
-    //EXPLODE WORD AND RANDOMIZE
     var letters = word.split("");
     var jumble = letters.slice().sort(function () {
       return 0.5 - Math.random();
     });
   
-    //LABEL
     $.each(jumble, function (index, letter) {
       $("<section></section>").html(letter).appendTo(puzzle);
     });
@@ -687,13 +747,13 @@ $(function () {
               setTimeout(()=>{
                   $("#result").typewrite({
                     actions: [
-                        {type: 'Yaaay!! You actually solved it :) '},
+                        {type: 'Yaaay!! You actually solved it &#128516; '},
                         {delay: 1000},
                         {type: '<br>'},
-                        {type: 'Who thought you had it in you...'},
+                        {type: 'Who thought you had it in you... &#128129;'},
                         {delay: 1000},
                         {type: '<br>'},
-                        {type: 'Now go and login with the following credentials ;)'},
+                        {type: 'Now go and login with the following credentials &#128521;'},
                         {delay: 1000},
                         {type: '<br>'},
                         {type: '<br>'},
@@ -704,9 +764,6 @@ $(function () {
                       ]
                     });
                 },200)
-            //   setTimeout(()=>{$("#result2").show();},1000)
-            //   setTimeout(()=>{$("#result3").show();},2000)
-            //   setTimeout(()=>{$("#result4").show();},3000)
           } 
         }
       })
