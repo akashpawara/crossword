@@ -779,7 +779,7 @@ $("#btnCheck").click(function () {
 });
 
 $(function () {
-    var word = "THELEAKYCULDRON",
+    var word = "THELEAKYCAULDRON",
       rand = [],
       puzzle = $("#puzzle").hide();
   
