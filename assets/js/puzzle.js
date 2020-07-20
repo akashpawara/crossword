@@ -35,14 +35,16 @@ var Bounds = {
 $(document).ready(function(){
     $("#intro-1").typewrite({
         actions: [
-            {type: 'Happy Birthday Helamb!! '},
+            {type: 'Hello Fellow Muggles'},
+            {delay: 2000},
+            {type: ' Blimey!!'},
             {delay: 1000},
             {remove: {num: 1, type: 'stepped'}},
-            {select: {from: 17, to: 23}},
+            {select: {from: 13, to: 28}},
             {delay: 1000},
-            {remove: {num: 6, type: 'whole'}},
+            {remove: {num: 15, type: 'whole'}},
             {delay: 300},
-            {type: 'ramb!! &#128516; '},
+            {type: 'Wizzards !! &#128516; '},
             {type: '<br>'},
             {delay: 1000},
             {type: '<br>'},
@@ -52,7 +54,7 @@ $(document).ready(function(){
             {type: 'Scroll down to see the clues for the puzzle'},
             {delay: 1000},
             {type: '<br>'},
-            {type: 'Move your mouse over clues to know who wrote it'},
+            {type: 'Move your mouse over clues to get some more hints'},
             {delay: 1000},
             {type: '<br>'},
             {type: '<br>'},
@@ -63,12 +65,12 @@ $(document).ready(function(){
             {type: `So, Let's Begin...... `},
           ]
         });
-    setTimeout(()=>{ $("#intro-1").fadeOut(2000);},33000)
+    setTimeout(()=>{ $("#intro-1").fadeOut(2000);},37500)
     setTimeout(()=>{ 
         $("#intro-1").css('display','none'); 
         $(".container").fadeIn(2000); 
         $(".container").css('display','block'); 
-    },35000)
+    },39500)
 });
 
 function Play() {
@@ -618,9 +620,16 @@ Play();
 let T = false;
 let H = false;
 let E = false;
-let M = false;
-let P = false;
-let S = false;
+let L = false;
+let A = false;
+let K = false;
+let Y = false;
+let C = false;
+let U = false;
+let D = false;
+let R = false;
+let O = false;
+let N = false;
 let stat;
 $("#btnCheck").click(function () {
     stat=0;
@@ -653,25 +662,74 @@ $("#btnCheck").click(function () {
                 E = true;
             }
             break;
-        case 'M':
-            if(!M){
-                let test = document.querySelector('[data-letter="M"]');
+        case 'L':
+            if(!L){
+                let test = document.querySelector('[data-letter="L"]');
                 test.classList.add("test");
-                M = true;
+                L = true;
             }
             break;
-        case 'P':
-            if(!P){
-                let test = document.querySelector('[data-letter="P"]');
+        case 'A':
+            if(!A){
+                let test = document.querySelector('[data-letter="A"]');
                 test.classList.add("test");
-                P = true;
+                A = true;
             }
             break;
-        case 'S':
-            if(!S){
-                let test = document.querySelector('[data-letter="S"]');
+        case 'K':
+            if(!K){
+                let test = document.querySelector('[data-letter="K"]');
                 test.classList.add("test");
-                S = true;
+                K = true;
+            }
+            break;
+        case 'Y':
+            if(!Y){
+                let test = document.querySelector('[data-letter="Y"]');
+                test.classList.add("test");
+                Y = true;
+            }
+            break;
+        case 'C':
+            if(!C){
+                let test = document.querySelector('[data-letter="C"]');
+                test.classList.add("test");
+                C = true;
+            }
+            break;
+        case 'U':
+            if(!U){
+                let test = document.querySelector('[data-letter="U"]');
+                test.classList.add("test");
+                U = true;
+            }
+            break;
+        case 'D':
+            if(!D){
+                let test = document.querySelector('[data-letter="D"]');
+                test.classList.add("test");
+                D = true;
+            }
+            break;
+        case 'R':
+            if(!R){
+                let test = document.querySelector('[data-letter="R"]');
+                test.classList.add("test");
+                R = true;
+            }
+            break;
+        case 'O':
+            if(!O){
+                let test = document.querySelector('[data-letter="O"]');
+                test.classList.add("test");
+                O = true;
+            }
+            break;
+        case 'N':
+            if(!N){
+                let test = document.querySelector('[data-letter="N"]');
+                test.classList.add("test");
+                N = true;
             }
             break;
         default:
@@ -694,14 +752,14 @@ $("#btnCheck").click(function () {
                 {delay: 4000},
                 {type: '<br>'},
                 {type: '<br>'},
-                {type: `{T, H, E, M, P, S} These were the letters right?`},
+                {type: `{T, H, E, L, A, K, Y, C, U, V, D, R, O, N} These were the letters right?`},
                 {delay: 3000},
                 {type: '<br>'},
                 {type: '<br>'},
                 {type: 'So in the next Puzzle, these letters will be jumbled up'},
                 {delay: 1000},
                 {type: '<br>'},
-                {type: 'You need to drag those letters left and right to make up your answer'},
+                {type: 'You need to drag those letters to thier respective place to make a meaningful reference'},
                 {delay: 1000},
                 {type: '<br>'},
                 {type: '<br>'},
@@ -711,17 +769,17 @@ $("#btnCheck").click(function () {
     },3500)
     setTimeout(()=>{ 
         $('#intro-2').fadeOut(3000);
-    },35000);
+    },39000);
     setTimeout(()=>{ 
         $('#intro-2').css('display','none');
         $('#wrapper').fadeIn(3000);
         $('#wrapper').css('display','block');
-    },38000);
+    },42000);
   }
 });
 
 $(function () {
-    var word = "THETEMPEST",
+    var word = "THELEAKYCULDRON",
       rand = [],
       puzzle = $("#puzzle").hide();
   
@@ -750,20 +808,18 @@ $(function () {
                         {type: 'Yaaay!! You actually solved it &#128516; '},
                         {delay: 1000},
                         {type: '<br>'},
-                        {type: 'Who thought you had it in you... &#128129;'},
+                        {type: 'You are a true Wizard!! &#129497;'},
                         {delay: 1000},
                         {type: '<br>'},
-                        {type: 'Now go and login with the following credentials &#128521;'},
+                        {type: 'Click on the below link, enable mic and check which house you get sorted into &#128521;'},
                         {delay: 1000},
-                        {type: '<br>'},
-                        {type: '<br>'},
-                        {type: 'INSTA ID - hitlerkabaap'},
-                        {delay: 1000},
-                        {type: '<br>'},
-                        {type: 'INSTA PASSWORD - TheTempest '},
                       ]
                     });
                 },200)
+                setTimeout(()=>{
+                  $(".sortMe").fadeIn(2000);
+                  $(".sortMe").css("display","inline-block");
+                },15000)
           } 
         }
       })

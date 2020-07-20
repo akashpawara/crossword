@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="crossword.css">
+    <link rel="stylesheet" href="assets/css/puzzle.css">
     <title>Crossword</title>
 </head>
 <body>
     <div class="container crosswordDisplay">
+    </br>
         <div class="row">
           <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
           <div class="btn btn-default disabled" id="btnCreate">Create</div>
@@ -22,66 +23,87 @@
             <div class="clueDirection" id="directionAcross">ACROSS</div>
       
             <div class="line">
-              <input class="word" type="text" value="Waah" />
+              <input class="word" type="text" value="Fluffy" />
               <span class="lineNum"></span>
-              <input class="clue" value="3...2...1...?" />
-              <span class="tooltiptext">by Gayatri</span>
+              <input class="clue" value="We Gaurd a trap door, an Entrance towards the artifact 'Sorcerer's Stone'" />
+              <span class="tooltiptext">Hagrid's loyal pet</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="Javelins" />
+              <input class="word" type="text" value="TheFatLady" />
               <span class="lineNum"></span>
-              <input class="clue" value="You planned my murder with a bunch of these" />
-              <span class="tooltiptext">by Sparsh</span>
+              <input class="clue" value="Who is the security guard at the entrance of Gryffindor’s Common room" />
+              <span class="tooltiptext">The person inside potrait</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="PolarBear" />
+              <input class="word" type="text" value="Deluminator" />
               <span class="lineNum"></span>
-              <input class="clue" value="What is your character in the comic reference which I was goinng to put as caption for our pic on my feed?" />
-              <span class="tooltiptext">by Shivani</span>
+              <input class="clue" value="What was used by Dumbledore to light up the Street lights in Privet Drive?" />
+              <span class="tooltiptext">Also used by Ron</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="RomaGupta" />
+              <input class="word" type="text" value="Basilisk" />
               <span class="lineNum"></span>
-              <input class="clue" value="10th grade ki Saturday afternoon wali class ki teacher ka naam" />
-              <span class="tooltiptext">by Madhulika</span>
+              <input class="clue" value="I'm a Magical Beast, Hidden in the chamber of secrets" />
+              <span class="tooltiptext">A bright green snake</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="Consigliere" />
+              <input class="word" type="text" value="Nurmengard" />
               <span class="lineNum"></span>
-              <input class="clue" value="If you are my Godfather, I'm your .... " />
-              <span class="tooltiptext">by Hrutuja</span>
+              <input class="clue" value="The name of the prison where Gellert Grindelwald was imprisoned" />
+              <span class="tooltiptext">A prison in Austria</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="OddEven" />
+              <input class="word" type="text" value="Grindelwald" />
               <span class="lineNum"></span>
-              <input class="clue" value="Which is the game jismein tu hamesha haarta hai?" />
-              <span class="tooltiptext">by Pihu</span>
+              <input class="clue" value="Who defeated Albus Dumbledore in a Global wizarding war in 1945" />
+              <span class="tooltiptext">His Best Friend</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="Palolem" />
+              <input class="word" type="text" value="Gillyweed" />
               <span class="lineNum"></span>
-              <input class="clue" value="We drove to this island and had the best time of our life" />
-              <span class="tooltiptext">by Varshini</span>
+              <input class="clue" value="While doing the Triwizard Tournament’s second task, what did Harry eat inorder to breathe under the water." />
+              <span class="tooltiptext">A magical plant</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="directions" />
+              <input class="word" type="text" value="spiders" />
               <span class="lineNum"></span>
-              <input class="clue" value="What question do I always ask when I come to your place?" />
-              <span class="tooltiptext">by Dhruvam</span>
+              <input class="clue" value="Ronald Weasley had a phobia of which insect" />
+              <span class="tooltiptext">8 legged creatures</span>
             </div>
       
             <div class="line">
-              <input class="word" type="text" value="OpenMic" />
+              <input class="word" type="text" value="Dementors" />
               <span class="lineNum"></span>
-              <input class="clue" value="Our perfect night out would be: " />
-              <span class="tooltiptext">by Sajani</span>
+              <input class="clue" value="Who were appointed as the guards of Azkaban prison by The Ministry of Magic" />
+              <span class="tooltiptext">They give you despair</span>
+            </div>
+
+            <div class="line">
+              <input class="word" type="text" value="Eileen" />
+              <span class="lineNum"></span>
+              <input class="clue" value="Name the mother of Severus Snape" />
+              <span class="tooltiptext">A pure-blooded witch</span>
+            </div>
+
+            <div class="line">
+              <input class="word" type="text" value="Aragog" />
+              <span class="lineNum"></span>
+              <input class="clue" value="What was the name of Hagrid’s pet" />
+              <span class="tooltiptext">A giant spider</span>
+            </div>
+
+            <div class="line">
+              <input class="word" type="text" value="ViktorKrum" />
+              <span class="lineNum"></span>
+              <input class="clue" value="Who was Hermione’s date at the Yule Ball" />
+              <span class="tooltiptext">The Seeker for the Bulgarian National Quidditch team</span>
             </div>
       
           </div>
@@ -94,14 +116,20 @@
     </div>
 
     <div class="sortable-items" id="wrapper">
-        <div id="puzzle"></div></br></br></br>
-        <div id="result"></div>
+        <p>I'm an Entrance to Diagon Alley</p>
+        <p>I'm from London</p>
+        <p>Harry came to me for his first jorney to Hogwarts</p>
+        <p>I've three words, What am I?</p></br>
+        <div id="puzzle"></div></br></br></br></br></br></br>
+        <div id="result"></div></br></br></br>
+        <a href="https://akashpawara.github.io/sorting-hat/" class="sortMe">SORT ME!</a>
     </div>
     <div id="intro-1"></div>
     <div id="intro-2"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
-<script type="text/javascript" src="crossword.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="assets/js/puzzle.js"></script>
 </body>
 </html>
