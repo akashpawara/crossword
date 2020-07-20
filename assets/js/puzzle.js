@@ -44,7 +44,7 @@ $(document).ready(function(){
             {delay: 1000},
             {remove: {num: 15, type: 'whole'}},
             {delay: 300},
-            {type: 'Wizzards !! &#128516; '},
+            {type: 'Wizards !! &#128516; '},
             {type: '<br>'},
             {delay: 1000},
             {type: '<br>'},
